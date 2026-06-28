@@ -1,18 +1,26 @@
 {
-  "name": "as",
+  "name": "teste-junto-final-bolao",
   "version": "1.0.0",
-  "description": "",
+  "description": "API de bolão da Copa 2026 com autenticação, jogos e palpites para apresentação de backend.",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch src/server.js"
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate": "knex migrate:latest",
+    "migrate:rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "knex": "knex"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "commonjs",
   "dependencies": {
-    "axios": "^1.18.0",
+    "axios": "^1.18.1",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "helmet": "^8.0.0",
     "jsonwebtoken": "^9.0.3",
     "knex": "^3.2.10",
     "sqlite3": "^6.0.1"
