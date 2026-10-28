@@ -1,7 +1,7 @@
 {
   "name": "teste-junto-final-bolao",
   "version": "1.0.0",
-  "description": "API de bolão da Copa 2026 com autenticação, jogos e palpites para apresentação de backend.",
+  "description": "API acadêmica de bolão com autenticação, jogos e palpites, integrada a uma WorldCupAPI com dados da Copa de 2022.",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
