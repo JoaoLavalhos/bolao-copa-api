@@ -1,8 +1,10 @@
-# Bolão Copa 2026 API
+# Bolão da Copa — API
 
-Projeto acadêmico de backend desenvolvido para uma aplicação de bolão da Copa de 2026.
+Projeto acadêmico de backend para uma aplicação de bolão, com autenticação, consulta de jogos e gerenciamento de palpites.
 
-A API foi construída em Node.js com Express e organizada em camadas, incluindo autenticação, rotas, controllers, services, acesso a banco de dados e uma API auxiliar de partidas para os testes da aplicação.
+A API principal foi construída em Node.js com Express e organizada em camadas, incluindo autenticação, rotas, controllers, services e persistência com SQLite/Knex.
+
+O repositório também inclui uma `WorldCupAPI/` auxiliar baseada nos jogos e seleções da **Copa do Mundo de 2022**, utilizada como fonte local de partidas durante os testes.
 
 ## Tecnologias
 
@@ -15,6 +17,7 @@ A API foi construída em Node.js com Express e organizada em camadas, incluindo 
 - Axios
 - Helmet
 - Postman
+- TypeScript na API auxiliar
 
 ## Recursos
 
@@ -40,7 +43,7 @@ src/
 └── server.js
 ```
 
-A pasta `WorldCupAPI/` contém uma API auxiliar utilizada nos testes. Se ela não estiver disponível, a API principal possui partidas internas de reserva.
+A pasta `WorldCupAPI/` contém dados da Copa do Mundo de 2022, incluindo seleções, grupos, estádios e partidas da competição. A API principal consulta essa fonte local e possui uma pequena lista interna de reserva caso a API auxiliar não esteja disponível.
 
 ## Como executar
 
@@ -55,4 +58,4 @@ Consulte também o README dentro de `WorldCupAPI/` para executar a API auxiliar.
 
 ## Contexto
 
-Projeto desenvolvido como atividade acadêmica de backend, com foco em APIs REST, autenticação, persistência de dados e organização de uma aplicação Node.js.
+Projeto desenvolvido como atividade acadêmica de backend, com foco em APIs REST, autenticação, persistência de dados, integração entre serviços e organização de uma aplicação Node.js.
