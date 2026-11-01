@@ -1,0 +1,251 @@
+{
+  "info": {
+    "_postman_id": "3c1ca162-c5ed-4000-8e59-741900e03d38",
+    "name": "Bolao",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55055891",
+    "_collection_link": "https://go.postman.co/collection/55055891-3c1ca162-c5ed-4000-8e59-741900e03d38?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "LISTAR JOGOS",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/jogos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "jogos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LOGIN",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"bruno.teste@email.com\",\r\n  \"senha\": \"Copa2026@\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LISTAR PALPITES",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{supabase_service_role_api_key_0gws}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/palpites",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "palpites"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CRIAR PALPITES",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{supabase_service_role_api_key_0gws}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"jogo\": \"Brasil x México\",\r\n  \"gols_a\": 5,\r\n  \"gols_b\": 1,\r\n  \"data_jogo\": \"2026-06-19\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/palpites",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "palpites"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ATUALIZAR PALPITES",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{supabase_service_role_api_key_0gws}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"gols_a\": 3,\r\n  \"gols_b\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/palpites/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "palpites",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETAR PALPITE",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{supabase_service_role_api_key_0gws}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/palpites/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "palpites",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "supabase_service_role_api_key_0fm5",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_0fm5",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_16f0",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0fm5",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_16f0",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_07wb",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0gws",
+      "secret": true
+    }
+  ]
+}
